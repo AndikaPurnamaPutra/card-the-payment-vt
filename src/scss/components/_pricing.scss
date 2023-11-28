@@ -1,0 +1,134 @@
+.section-pricing {
+  background-color: $black;
+  padding-block: 120px;
+
+  @include responsive(md) {
+    padding-block: 60px;
+  }
+
+  .container {
+    &-pricing {
+      flex-direction: column;
+      gap: 80px;
+
+      .content {
+        &-top {
+          @include flex(column, center, center);
+          gap: 24px;
+
+          .subtext {
+            &-desc {
+              max-width: 620px;
+              text-align: center;
+            }
+          }
+        }
+
+        &-bottom {
+          display: grid;
+          grid-column-start: 1;
+          grid-column-end: 4;
+          grid-template-columns: repeat(3, 1fr);
+          row-gap: 32px;
+          column-gap: 40px;
+
+          @include responsive(sm) {
+            grid-template-columns: repeat(1, 1fr);
+          }
+
+          .card {
+            background-color: $light-white;
+            padding: 56px 72px;
+            @include flex(column, flex-start, space-between);
+            gap: 40px;
+            transition: all 300ms ease;
+
+            @include responsive(xl) {
+              padding: 32px 42px;
+            }
+
+            @include responsive(md) {
+              padding: 22px 36px;
+            }
+
+            &-image {
+              max-width: 416px;
+            }
+
+            &-text {
+              &-subtitle {
+                margin-bottom: 24px;
+
+                @include responsive(md) {
+                  margin-bottom: 16px;
+                }
+              }
+
+              &-title {
+                color: #0A0A0A;
+              }
+            }
+
+            &:hover {
+              background-color: $dark-gray;
+
+              .card-text {
+                &-subtitle {
+                  color: $light-white;
+                }
+
+                &-title {
+                  color: $primary;
+                }
+              }
+
+              .btn-link {
+                color: $light-white;
+
+                svg {
+                  path {
+                    stroke: $light-white;
+                  }
+                }
+              }
+            }
+
+            &:last-child {
+              grid-column: 1/4;
+
+              flex-direction: row;
+              align-items: center;
+              background-color: $dark-gray;
+
+              @include responsive(sm) {
+                grid-column: unset;
+              }
+
+              @include responsive(md) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 32px;
+              }
+
+              .card-text {
+                &-title {
+                  color: $light-white;
+                  margin-bottom: 50px;
+                  max-width: 480px;
+
+                  @include responsive(md) {
+                    margin-bottom: 24px;
+                  }
+                }
+
+                .btn-link {
+                  color: $primary !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

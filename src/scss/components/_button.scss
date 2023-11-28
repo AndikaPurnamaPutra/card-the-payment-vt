@@ -1,0 +1,113 @@
+.btn {
+  border-color: transparent;
+  color: $white;
+  text-align: center;
+  font-family: $font-display;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease;
+  background-color: transparent;
+
+  &-primary {
+    color: $primary;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 112%;
+    gap: 48px;
+
+    @include responsive(xl) {
+      gap: 32px;
+    }
+
+    @include responsive(md) {
+      font-size: 16px;
+    }
+
+    span {
+      flex-shrink: 0;
+    }
+
+    img {
+      max-width: 80px;
+
+      @include responsive(md) {
+        max-width: 40px;
+      }
+    }
+  }
+
+  &-secondary {
+    color: $primary;
+    font-weight: 700;
+    line-height: 112.5%;
+    gap: 48px;
+
+    span {
+      flex-shrink: 0;
+    }
+
+    img {
+      max-width: 80px;
+
+      @include responsive(md) {
+        max-width: 40px;
+      }
+    }
+  }
+
+  &-link {
+    color: $primary;
+    line-height: 112.5%;
+    gap: 8px;
+
+    &-secondary {
+      font-size: 20px;
+      font-weight: 700;
+
+      @include responsive(md) {
+        font-size: 16px;
+      }
+
+      svg {
+        max-width: 80px;
+
+        @include responsive(md) {
+          max-width: 40px;
+        }
+      }
+    }
+  }
+
+  &-lang {
+    gap: 8px;
+    padding: 8px 16px 8px 12px;
+    border-radius: 24px;
+    background: #272727;
+
+    @include responsive(md) {
+      padding: 4px 12px;
+    }
+
+    .img-flag {
+      max-width: 32px;
+
+      @include responsive(md) {
+        max-width: 24px;
+      }
+    }
+
+    a {
+      @include flex(row, center, space-between);
+      gap: 8px;
+
+      img {
+        max-width: 12px;
+      }
+    }
+  }
+}

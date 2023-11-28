@@ -1,0 +1,123 @@
+.section-feature {
+  background-color: $black;
+  padding-block: 120px;
+
+  @include responsive(md) {
+    padding-block: 60px;
+  }
+
+  .container {
+    &-feature {
+      flex-direction: column;
+
+      @include responsive(sm) {
+        gap: 32px;
+      }
+
+      .content {
+        &-top {
+          @include flex(column, flex-start, space-between);
+
+          @include responsive(md) {
+            gap: 24px;
+          }
+
+          .subtext {
+            &-text {
+              @include flex(row, center, space-between);
+              width: 100%;
+
+              @include responsive(md) {
+                @include flex(column, flex-start);
+              }
+
+              &-display {
+                max-width: 840px;
+                margin-bottom: 40px;
+
+                @include responsive(md) {
+                  max-width: 80%;
+                  margin-bottom: 24px;
+                }
+
+                @include responsive(sm) {
+                  max-width: 100%;
+                }
+              }
+
+              &-desc {
+                max-width: 330px;
+
+                @include responsive(md) {
+                  max-width: 100%;
+                }
+              }
+            }
+          }
+        }
+
+        &-bottom {
+          @include flex(row, flex-start, center);
+          gap: 40px;
+          margin-top: -40px;
+
+          @include responsive(sm) {
+            margin-top: 0;
+            @include flex(column, flex-start, center);
+            gap: 32px;
+          }
+
+          .card {
+            background-color: $white;
+            width: 510px;
+            @include flex(column, null, null);
+
+            @include responsive(sm) {
+              width: 100%;
+            }
+
+            &-text {
+              padding: 72px 48px;
+
+              @include responsive(md) {
+                padding: 36px 24px;
+              }
+
+              &-title {
+                margin-bottom: 32px;
+              }
+
+              &-desc {
+                font-size: 16px;
+              }
+            }
+
+            &:first-child {
+              margin-top: 180px;
+              background-color: $dark-gray;
+
+              @include responsive(sm) {
+                margin-top: 0;
+              }
+
+              .card-text {
+                &-title {
+                  color: $light-white;
+                }
+
+                &-desc {
+                  color: $light-gray;
+                }
+              }
+            }
+
+            img {
+              height: 105px;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.section-statistic {
+    background-color: #272727;
+    padding-block: 120px;
+
+    @include responsive(md) {
+        padding-block: 60px;
+    }
+
+    .container {
+        &-statistic {
+            justify-content: space-between;
+
+            @include responsive(md) {
+                flex-direction: row;
+            }
+
+            @include responsive(sm) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 24px;
+            }
+
+            .item {
+                text-align: center;
+                width: 320px;
+
+                @include responsive(md) {
+                    width: 100%;
+                }
+
+                &-title {
+                    color: $display;
+                    font-family: $font-display;
+                    font-size: 80px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 150%;
+                    /* 120px */
+                    letter-spacing: -2.4px;
+
+                    span {
+                        color: $primary;
+                    }
+
+                    @include responsive(xl) {
+                        font-size: 64px;
+                    }
+
+                    @include responsive(md) {
+                        font-size: 42px;
+                    }
+                }
+
+                &-subtitle {
+                    color: $display-secondary;
+                    font-family: $font-display;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 200%;
+                    /* 32px */
+                }
+            }
+        }
+    }
+}

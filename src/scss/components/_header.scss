@@ -1,0 +1,277 @@
+.section-header {
+  background-color: $black;
+  padding-block: 60px;
+
+  @include responsive(md) {
+    padding-block: 30px;
+  }
+
+  .container {
+    &-header {
+      flex-direction: column;
+      @include responsive(md) {
+        gap: 32px;
+      }
+
+      .content {
+        &-top {
+          @include flex(column, flex-end, space-between);
+          gap: 80px;
+
+          @include responsive(xl) {
+            gap: 60px;
+          }
+
+          @include responsive(md) {
+            align-items: flex-start;
+            gap: 24px;
+          }
+
+          .subtext {
+            &-text {
+              &:first-child {
+                @include flex(row, center, space-between);
+                width: 100%;
+
+                @include responsive(md) {
+                  @include flex(column, flex-start, space-between);
+                  gap: 24px;
+                }
+              }
+
+              &-display {
+                max-width: 840px;
+
+                @include responsive(xl) {
+                  font-size: 72px;
+                  max-width: 540px;
+                }
+
+                @include responsive(md) {
+                  max-width: 80%;
+                }
+
+                @include responsive(sm) {
+                  font-size: 38px;
+                  max-width: 100%;
+                }
+
+                span {
+                  img {
+                    max-width: 64px;
+                    vertical-align: text-top;
+
+                    @include responsive(sm) {
+                      max-width: 32px;
+                    }
+                  }
+                }
+              }
+
+              &-desc {
+                max-width: 584px;
+
+                @include responsive(xl) {
+                  max-width: 448px;
+                }
+
+                @include responsive(md) {
+                  max-width: 100%;
+                }
+              }
+            }
+          }
+        }
+
+        &-bottom {
+          position: relative;
+          margin-top: -70px;
+
+          @include responsive(xl) {
+            margin-top: -35px;
+          }
+
+          @include responsive(md) {
+            margin-top: 0;
+          }
+
+          .subtext {
+            &-image {
+              @include flex(row, flex-start, space-between);
+
+              @include responsive(md) {
+                display: none;
+              }
+
+              img {
+                max-width: 640px;
+                z-index: 3;
+
+                @include responsive(xl) {
+                  max-width: 480px;
+                }
+
+                &:nth-child(2) {
+                  margin-left: -319px;
+                  margin-top: 160px;
+                  z-index: 2;
+
+                  @include responsive(xl) {
+                    margin-top: 80px;
+                  }
+                }
+
+                &:nth-child(3) {
+                  margin-left: -319px;
+                  margin-top: 320px;
+                  z-index: 1;
+
+                  @include responsive(xl) {
+                    margin-top: 160px;
+                  }
+                }
+              }
+            }
+
+            &-text {
+              .user-group {
+                .avatar {
+                  position: absolute;
+                  bottom: 7.5px;
+                  left: 330px;
+                  @include flex(column, flex-start, space-between);
+                  gap: 16px;
+
+                  @include responsive(xl) {
+                    gap: 8px;
+                    left: 230px;
+                    bottom: 0;
+                  }
+
+                  @include responsive(md) {
+                    position: relative;
+                    left: 0;
+                  }
+
+                  &-group {
+                    @include flex(row, center, flex-start);
+
+                    .img {
+                      max-width: 44px;
+                      border-radius: 50%;
+                      border: 2px solid $dark-gray;
+
+                      @include responsive(xl) {
+                        max-width: 40px;
+                      }
+
+                      &:not(:first-child) {
+                        margin-left: -16px;
+                      }
+
+                    }
+
+                    .avatar-text {
+                      color: #FFF;
+                      font-family: $font-display;
+                      font-size: 20px;
+                      font-style: normal;
+                      font-weight: 700;
+                      line-height: 24px;
+                      /* 120% */
+                      padding: 10px 12px;
+                      background-color: $primary;
+                      border-radius: 22px;
+                      margin-left: -16px;
+                      border: 2px solid $dark-gray;
+
+                      @include responsive(xl) {
+                        font-size: 16px;
+                        padding: 5px 6px;
+                      }
+                    }
+                  }
+
+                  .user-text {
+                    color: #C2C2C2;
+                    font-family: $font-display;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    @include flex(row, center, space-between);
+                    gap: 10px;
+
+                    /* 24px */
+                    img {
+                      max-width: 8px;
+                    }
+                  }
+                }
+
+                .label {
+                  color: #FFF;
+                  font-family: $font-display;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 200;
+                  line-height: 150%;
+                  position: absolute;
+                  right: 77.5px;
+                  top: 176px;
+                  /* 24px */
+                  @include flex(column, center, space-between);
+                  gap: 14.5px;
+
+                  @include responsive(xl) {
+                    top: 78px;
+                    gap: 8px;
+                  }
+
+                  @include responsive(md) {
+                    display: none;
+                  }
+
+                  img {
+                    max-width: 32px;
+
+                    @include responsive(xl) {
+                      max-width: 16px;
+                    }
+                  }
+                }
+
+                .img-decoration {
+                  max-width: 144px;
+                  position: absolute;
+                  left: 76px;
+                  bottom: 86px;
+                  animation: spin 5s infinite linear;
+
+                  @include responsive(xl) {
+                    max-width: 82px;
+                    bottom: 54px;
+                  }
+
+                  @include responsive(md) {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,104 @@
+.section-product {
+  padding-block: 120px;
+
+  @include responsive(md) {
+    padding-block: 60px;
+  }
+
+  .container {
+    &-product {
+      flex-direction: column;
+      gap: 40px;
+
+      @include responsive(md) {
+        gap: 32px;
+      }
+
+      .content {
+        &-top {
+          .subtext {
+            &-display {
+              color: $black;
+              text-align: center;
+              max-width: 1280px;
+            }
+          }
+        }
+
+        &-bottom {
+          @include flex(row, center, space-between);
+
+          @include responsive(xl) {
+            gap: 52px;
+          }
+
+          .subtext {
+            &-image {
+              display: inline-flex;
+              flex-direction: column;
+              align-items: flex-end;
+              width: 620px;
+
+              @include responsive(md) {
+                display: none;
+              }
+
+              .img-card {
+                max-width: 491.1px;
+                margin-block: -180px;
+
+                @include responsive(xl) {
+                  margin-block: -136px;
+                }
+              }
+            }
+
+            &-items {
+              .item {
+                @include flex(column, flex-start, space-between);
+                gap: 32px;
+                width: 510px;
+                padding-block: 48px;
+                border-bottom: 1px solid #C2C2C2;
+
+                @include responsive(md) {
+                  width: 100%;
+                  gap: 24px;
+                  padding-block: 32px;
+                }
+
+                &:first-child {
+                  padding-top: 0;
+                }
+
+                &:last-child {
+                  padding-bottom: 0;
+                  border-bottom: unset;
+                }
+
+                &-text {
+
+                  &-desc {
+                    color: #757575;
+                    font-size: 16px;
+                    line-height: 200%;
+                    /* 32px */
+                  }
+
+                }
+
+                &:first-child {
+                  .item-text {
+                    &-subtitle {
+                      margin-bottom: 16px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

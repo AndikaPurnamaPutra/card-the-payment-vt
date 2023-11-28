@@ -1,0 +1,23 @@
+$primary: #F15C45;
+
+$white: #ffffff;
+$light-white: #F7F7F7;
+$black: #191919;
+$dark-blue: #051030;
+$dark-gray: #272727;
+$gray: #757575;
+$light-gray: #E0E0E0;
+
+$display: $white;
+$display-secondary: $light-white;
+$subtext : #C2C2C2;
+$subtext-secondary : $gray;
+
+.text-primary {
+    color: $primary;
+}
+
+.text-secondary {
+    color: $black;
+}
+
