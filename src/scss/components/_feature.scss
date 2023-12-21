@@ -2,7 +2,7 @@
   background-color: $black;
   padding-block: 120px;
 
-  @include responsive(md) {
+  @include responsive(lg) {
     padding-block: 60px;
   }
 
@@ -18,7 +18,7 @@
         &-top {
           @include flex(column, flex-start, space-between);
 
-          @include responsive(md) {
+          @include responsive(lg) {
             gap: 24px;
           }
 
@@ -27,7 +27,7 @@
               @include flex(row, center, space-between);
               width: 100%;
 
-              @include responsive(md) {
+              @include responsive(lg) {
                 @include flex(column, flex-start);
               }
 
@@ -35,7 +35,7 @@
                 max-width: 840px;
                 margin-bottom: 40px;
 
-                @include responsive(md) {
+                @include responsive(lg) {
                   max-width: 80%;
                   margin-bottom: 24px;
                 }
@@ -48,7 +48,7 @@
               &-desc {
                 max-width: 330px;
 
-                @include responsive(md) {
+                @include responsive(lg) {
                   max-width: 100%;
                 }
               }
@@ -79,7 +79,7 @@
             &-text {
               padding: 72px 48px;
 
-              @include responsive(md) {
+              @include responsive(lg) {
                 padding: 36px 24px;
               }
 

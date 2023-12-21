@@ -2,14 +2,14 @@
   background-color: $black;
   padding-block: 60px;
 
-  @include responsive(md) {
+  @include responsive(lg) {
     padding-block: 30px;
   }
 
   .container {
     &-header {
       flex-direction: column;
-      @include responsive(md) {
+      @include responsive(lg) {
         gap: 32px;
       }
 
@@ -22,7 +22,7 @@
             gap: 60px;
           }
 
-          @include responsive(md) {
+          @include responsive(lg) {
             align-items: flex-start;
             gap: 24px;
           }
@@ -33,7 +33,7 @@
                 @include flex(row, center, space-between);
                 width: 100%;
 
-                @include responsive(md) {
+                @include responsive(lg) {
                   @include flex(column, flex-start, space-between);
                   gap: 24px;
                 }
@@ -47,7 +47,7 @@
                   max-width: 540px;
                 }
 
-                @include responsive(md) {
+                @include responsive(lg) {
                   max-width: 80%;
                 }
 
@@ -75,7 +75,7 @@
                   max-width: 448px;
                 }
 
-                @include responsive(md) {
+                @include responsive(lg) {
                   max-width: 100%;
                 }
               }
@@ -91,7 +91,7 @@
             margin-top: -35px;
           }
 
-          @include responsive(md) {
+          @include responsive(lg) {
             margin-top: 0;
           }
 
@@ -99,7 +99,7 @@
             &-image {
               @include flex(row, flex-start, space-between);
 
-              @include responsive(md) {
+              @include responsive(lg) {
                 display: none;
               }
 
@@ -148,7 +148,7 @@
                     bottom: 0;
                   }
 
-                  @include responsive(md) {
+                  @include responsive(lg) {
                     position: relative;
                     left: 0;
                   }
@@ -228,7 +228,7 @@
                     gap: 8px;
                   }
 
-                  @include responsive(md) {
+                  @include responsive(lg) {
                     display: none;
                   }
 
@@ -253,7 +253,7 @@
                     bottom: 54px;
                   }
 
-                  @include responsive(md) {
+                  @include responsive(lg) {
                     display: none;
                   }
                 }

@@ -2,7 +2,7 @@
     background-color: #272727;
     padding-block: 120px;
 
-    @include responsive(md) {
+    @include responsive(lg) {
         padding-block: 60px;
     }
 
@@ -10,23 +10,27 @@
         &-statistic {
             justify-content: space-between;
 
-            @include responsive(md) {
+            @include responsive(lg) {
                 flex-direction: row;
             }
 
             @include responsive(sm) {
-                flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                gap: 24px;
+                gap: 0;
+                flex-wrap: wrap;
             }
 
             .item {
                 text-align: center;
                 width: 320px;
 
-                @include responsive(md) {
+                @include responsive(lg) {
                     width: 100%;
+                }
+
+                @include responsive(sm) {
+                    width: 50%;
                 }
 
                 &-title {
@@ -47,7 +51,7 @@
                         font-size: 64px;
                     }
 
-                    @include responsive(md) {
+                    @include responsive(lg) {
                         font-size: 42px;
                     }
                 }

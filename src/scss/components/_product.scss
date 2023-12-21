@@ -1,7 +1,7 @@
 .section-product {
   padding-block: 120px;
 
-  @include responsive(md) {
+  @include responsive(lg) {
     padding-block: 60px;
   }
 
@@ -10,7 +10,7 @@
       flex-direction: column;
       gap: 40px;
 
-      @include responsive(md) {
+      @include responsive(lg) {
         gap: 32px;
       }
 
@@ -39,7 +39,7 @@
               align-items: flex-end;
               width: 620px;
 
-              @include responsive(md) {
+              @include responsive(lg) {
                 display: none;
               }
 
@@ -61,7 +61,7 @@
                 padding-block: 48px;
                 border-bottom: 1px solid #C2C2C2;
 
-                @include responsive(md) {
+                @include responsive(lg) {
                   width: 100%;
                   gap: 24px;
                   padding-block: 32px;
